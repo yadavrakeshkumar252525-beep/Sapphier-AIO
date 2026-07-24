@@ -1,21 +1,23 @@
-const chalk = require("chalk");
-
 class Logger {
 
-    static info(message) {
-        console.log(chalk.blue("[INFO]"), message);
-    }
-
     static success(message) {
-        console.log(chalk.green("[SUCCESS]"), message);
+        console.log("✅ [SUCCESS]", message);
     }
 
-    static warn(message) {
-        console.log(chalk.yellow("[WARNING]"), message);
+    static info(message) {
+        console.log("ℹ️ [INFO]", message);
+    }
+
+    static warning(message) {
+        console.log("⚠️ [WARNING]", message);
     }
 
     static error(message) {
-        console.log(chalk.red("[ERROR]"), message);
+        console.error("❌ [ERROR]", message);
+    }
+
+    static debug(message) {
+        console.log("🔧 [DEBUG]", message);
     }
 
 }
